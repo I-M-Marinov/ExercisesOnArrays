@@ -18,9 +18,7 @@ namespace P4.ArrayRotation
 
                 for (int j = 0; j < inputArray.Length - 1; j++)
                 {
-                   
                     inputArray[j] = inputArray[j + 1];
-
                 }
 
                 inputArray[inputArray.Length - 1] = firstElement;
