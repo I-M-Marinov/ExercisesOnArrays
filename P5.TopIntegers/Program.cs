@@ -9,10 +9,7 @@ namespace P5.TopIntegers
         {
             int[] inputArray = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-            for (int i = 0; i < inputArray.Lenght; i++)
-            {
-                
-            }
+           
         }
     }
 }
