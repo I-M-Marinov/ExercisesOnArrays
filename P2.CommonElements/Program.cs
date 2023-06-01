@@ -7,8 +7,8 @@ namespace P2.CommonElements
     {
         static void Main(string[] args)
         {
-            string[] array1 = Console.ReadLine().Split().ToArray();
-            string[] array2 = Console.ReadLine().Split().ToArray();
+            string[] array1 = Console.ReadLine().Split();
+            string[] array2 = Console.ReadLine().Split();
 
 
             for (int i = 0; i < array2.Length; i++)
@@ -18,10 +18,6 @@ namespace P2.CommonElements
                     if (array2[i] == array1[k])
                     {
                         Console.Write($"{array2[i]} ");
-                    }
-                    else
-                    {
-                        continue;
                     }
                 }
             }
