@@ -15,7 +15,6 @@ namespace P1.Train
                 int passengers = int.Parse(Console.ReadLine());
                 input[i] = passengers;
                 sum += passengers;
-
             }
 
             Console.WriteLine(string.Join(" ", input));

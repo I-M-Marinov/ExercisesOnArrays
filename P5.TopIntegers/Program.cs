@@ -19,8 +19,6 @@ namespace P5.TopIntegers
                     strongNumber = inputArray[i];
                     strongNumbersArray[i] = strongNumber;
                 }
-
-
             }
             Console.WriteLine(string.Join(" ", strongNumbersArray));
         }
