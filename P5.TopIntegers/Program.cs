@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 
 namespace P5.TopIntegers
@@ -7,20 +8,35 @@ namespace P5.TopIntegers
     {
         static void Main(string[] args)
         {
-            int[] inputArray = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int[] strongNumbersArray = new int[inputArray.Length];
+            string[] inputArray = Console.ReadLine().Split();
+            int[] numbers = new int[inputArray.Length];
 
-            int strongNumber = 0;
 
-            for (int i = 0; i < inputArray.Length-1; i++)
+            for (int i = 0; i < inputArray.Length; i++)
             {
-                if (inputArray[i] > inputArray[i + 1] && i + 1 < inputArray.Length)
-                {
-                    strongNumber = inputArray[i];
-                    strongNumbersArray[i] = strongNumber;
-                }
+                numbers[i] = int.Parse(inputArray[i]);
             }
-            Console.WriteLine(string.Join(" ", strongNumbersArray));
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                bool isBigger = true;
+
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    if (numbers[i] <= numbers[j])
+                    {
+                        isBigger = false;
+                        break;
+                    }
+                }
+
+                if (isBigger) // true
+                {
+                    Console.Write($"{numbers[i]} ");
+                }
+
+            }
+
         }
     }
 }
